@@ -1,0 +1,14 @@
+{
+  "name": "fireball",
+  "version": "0.0.0",
+  "description": "Image hosting service a la bumble",
+  "main": "lib/fireball.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michael Garvin <gar@comrade.us>",
+  "license": "MIT",
+  "dependencies": {
+    "hapi": "^4.0.0"
+  }
+}

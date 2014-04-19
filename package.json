@@ -1,10 +1,10 @@
 {
   "name": "fireball",
   "description": "A very simple image host",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": {
-      "name": "Michael Garvin",
-      "url": "http://danger.computer"
+    "name": "Michael Garvin",
+    "url": "http://danger.computer"
   },
   "bugs": "https://github.com/wraithgar/fireball/issues",
   "license": "MIT",

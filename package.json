@@ -1,7 +1,7 @@
 {
   "name": "fireball",
   "description": "A very simple image host",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": {
     "name": "Michael Garvin",
     "url": "http://danger.computer"

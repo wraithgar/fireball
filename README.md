@@ -32,11 +32,11 @@ server.pack.require({'fireball': config}, function (err) {
 
 ```json
 {
-    "photoDirectory": "/path/to/images",
+    "imageDir": "/path/to/images",
     "baseURL": "/url/to/images",
     "smallWidth": "256",
     "mediumWidth": "512",
-    "largeWidth": "1024",
+    "largeWidth": "1024"
 }
 ```
 
@@ -50,7 +50,7 @@ server.pack.require({'fireball': config}, function (err) {
 
 ### Example urls:
 
-Let's say you set baseURL to ``/pics`` and that you put an image named ``mycat.jpg`` in the configured ``photoDirectory``.  Fireball would then make that photo available at the following urls (assuming you were running off of localhost):
+Let's say you set baseURL to ``/pics`` and that you put an image named ``mycat.jpg`` in the configured ``imageDir``.  Fireball would then make that photo available at the following urls (assuming you were running off of localhost):
 
 ```
 http://localhost/pics/mycat.jpg
@@ -59,5 +59,12 @@ http://localhost/pics/mycat-m.jpg
 http://localhost/pics/mycat-l.jpg
 ```
 
-These would be the original, smalle, medium, and large thumbnailed
-versions of that image.
+These would be the original, smalle, medium, and large thumbnailed versions of that image.
+
+### Notes:
+
+Fireball will need both read and write access to the imageDir, as it will make the thumbnail images if they do not already exist.
+
+This also means that if for some reason you would like a nonstandard size for a given images' thumbnail sizes, you can simply put them in the imageDir with their -s, -m, and -l names.
+
+Warning: Images ending in -s, -m, and -l will not be resized.

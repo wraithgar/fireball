@@ -1,14 +1,30 @@
 {
   "name": "fireball",
-  "version": "0.0.0",
-  "description": "Image hosting service a la bumble",
-  "main": "lib/fireball.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "A very simple image host",
+  "version": "0.0.1",
+  "author": {
+      "name": "Michael Garvin",
+      "url": "http://danger.computer"
   },
-  "author": "Michael Garvin <gar@comrade.us>",
+  "bugs": "https://github.com/wraithgar/fireball/issues",
   "license": "MIT",
   "dependencies": {
-    "hapi": "^4.0.0"
+    "bucker": "^1.0.9",
+    "gm": "^1.14.2",
+    "underscore": "^1.5.2",
+    "walk": "^2.2.1",
+    "wtchr": "0.0.1"
+  },
+  "devDependencies": {
+    "hapi": "^4.0.0",
+    "precommit-hook": "^0.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:wraithgar/fireball.git"
+  },
+  "main": "lib/fireball",
+  "engines": {
+    "node": "0.10.x"
   }
 }

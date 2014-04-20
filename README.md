@@ -35,8 +35,8 @@ server.pack.require({'fireball': config}, function (err) {
 ```json
 {
     "baseURL": "/url/to/images",
-    "imageDir": "/path/to/images",
-    "saveDir": "/path/to/save/resized/images",
+    "imageDir": "path/to/images",
+    "saveDir": "path/to/save/resized/images",
     "processing": [
         {
             "suffix": "s",
@@ -58,13 +58,17 @@ server.pack.require({'fireball': config}, function (err) {
 ```
 
 
-``baseURL``: where the images will be served from
+``baseURL``: (string, optional, default=``/fireball/``) where the images will be served from
 
-``imageDir``: local directory to look in for images.  Subdirectories here will translate to the url of the images.
+``imageDir``: (string, optional, default=``images``) local directory to look in for images.  Subdirectories here will translate to the url of the images.
 
-``saveDir``: where to save the processed images, will be created if missing.
+``saveDir``: (string, optional, default=``fireballImages``) where to save the processed images, will be created if missing.
 
-``processing``: defines the processing to do to images, key names here are added to the url of the original image. Currently only [resize](http://aheckmann.github.com/gm/docs.html#resize) is supported.
+``processing``: (object, optional, default=see below) defines the processing to do to images, key names here are added to the url of the original image. Currently only [resize](http://aheckmann.github.com/gm/docs.html#resize) is supported.
+
+### Default processing
+
+By default fireball will process images into three versions: s, m, and l with scaled widths of 256, 512, and 1024px respectively.  If the original image is smaller than the processed version would be the original is kept.
 
 
 ### Example urls:

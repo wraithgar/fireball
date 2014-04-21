@@ -1,0 +1,9 @@
+extends layout
+
+block body
+  body(id= bodyId)
+    include header
+    each image in images
+        p= image.url
+    each folder in folders
+        p= folder

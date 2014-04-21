@@ -1,0 +1,24 @@
+{
+  "name": "myImages",
+  "version": "0.0.1",
+  "main": "images.js",
+  "description": "demo fireball instance using hapi",
+  "dependencies": {
+    "hapi": "^3.0.0",
+    "fireball": "^0.0.7",
+    "jade": "~1.0.0",
+    "bucker": "~0.8.0"
+  },
+  "author": {
+    "name": "Michael Garvin",
+    "url": "http://danger.computer"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": "0.10.x"
+  },
+  "scripts": {
+    "postinstall": "npm link ../../fireball",
+    "postupdate": "npm link ../../fireball"
+  }
+}

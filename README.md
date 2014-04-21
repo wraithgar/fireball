@@ -34,6 +34,7 @@ server.pack.require({'fireball': config}, function (err) {
 
 ```json
 {
+    "cache": true,
     "baseURL": "/url/to/images",
     "imageDir": "path/to/images",
     "saveDir": "path/to/save/resized/images",
@@ -56,7 +57,7 @@ server.pack.require({'fireball': config}, function (err) {
     ]
 }
 ```
-
+``cache``: (boolean, optional, default=``true``) if set to false, files will be reprocessed on startup.
 
 ``baseURL``: (string, optional, default=``/fireball/``) where the images will be served from
 
@@ -70,7 +71,6 @@ server.pack.require({'fireball': config}, function (err) {
 
 By default fireball will process images into three versions: s, m, and l with scaled widths of 256, 512, and 1024px respectively.  If the original image is smaller than the processed version would be the original is kept.
 
-
 ### Example urls:
 
 Let's say you set baseURL to ``/pics`` and that you put an image named ``mycat.jpg`` in the configured ``imageDir``.  Given the above example, Fireball would then make that photo available at the following urls (assuming you were running off of localhost):
@@ -83,3 +83,7 @@ http://localhost/pics/mycat-l.jpg
 ```
 
 These would be the original, 256px wide, 512px wide, and 1024px wide versions of that image.  Fireball will not increase the size of an image, if the resize is greater than the original, the original is used.
+
+### Caching
+
+When ``cache`` is true (which it is by default), if a suffix has alread ran through a given processing action, it will not run again.  This is great for startup times, but it means that if you change a processing rule for a given suffix, you will need to remove all the files from the saveDir for that suffix.

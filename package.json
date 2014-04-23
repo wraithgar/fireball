@@ -9,7 +9,6 @@
   "bugs": "https://github.com/wraithgar/fireball/issues",
   "license": "MIT",
   "dependencies": {
-    "bucker": "^1.0.9",
     "gm": "^1.14.2",
     "walk": "^2.2.1",
     "wtchr": "0.0.1",

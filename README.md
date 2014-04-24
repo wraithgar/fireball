@@ -7,7 +7,7 @@ A very simple image hosting library
 - Serve images (originals and resized to preconfigured sizes) from configurable directory
 - Uses [hapi](http://hapijs.org)
 - Requires either [GraphicsMagick](http://www.graphicsmagick.org/) or [ImageMagick](http://www.imagemagick.org/).  Please see [gm](https://github.com/aheckmann/gm) docs for more info
-- Patterend after [bumble](https://github.com/adambrault/bumble)
+- Patterned after [bumble](https://github.com/adambrault/bumble)
 
 ## Add the module to your app
 

@@ -34,7 +34,7 @@ server.pack.require({'fireball': config}, function (err) {
 
 ```json
 {
-    "cache": true,
+    "cache": 3600000,
     "baseURL": "/url/to/images",
     "imageDir": "path/to/images",
     "saveDir": "path/to/save/resized/images",
@@ -57,7 +57,7 @@ server.pack.require({'fireball': config}, function (err) {
     ]
 }
 ```
-``cache``: (boolean, optional, default=``true``) if set to false, files will be reprocessed on startup.
+``cache``: (integer, optional, default=``3600000`` (one hour)) Expiration time in milliseconds to send to the browser on request.  Set to 0 to disable browser-cache headers.
 
 ``baseURL``: (string, optional, default=``/fireball/``) where the images will be served from
 
@@ -66,6 +66,8 @@ server.pack.require({'fireball': config}, function (err) {
 ``saveDir``: (string, optional, default=``fireballImages``) where to save the processed images, will be created if missing.
 
 ``processing``: (object, optional, default=see below) defines the processing to do to images, key names here are added to the url of the original image. Currently only [resize](http://aheckmann.github.com/gm/docs.html#resize) is supported.
+
+``reprocess``: (boolean, optional, default=``false``) whether or not to reprocess all files in imageDir on startup regardless of if they have processed results in saveDir
 
 ### Default processing
 
@@ -86,4 +88,4 @@ These would be the original, 256px wide, 512px wide, and 1024px wide versions of
 
 ### Caching
 
-When ``cache`` is true (which it is by default), if a suffix has alread ran through a given processing action, it will not run again.  This is great for startup times, but it means that if you change a processing rule for a given suffix, you will need to remove all the files from the saveDir for that suffix.
+When ``reprocess`` is false (which it is by default), if a suffix has alread ran through a given processing action, it will not run again.  This is great for startup times, but it means that if you change a processing rule for a given suffix, you will need to remove all the files from the saveDir for that suffix.

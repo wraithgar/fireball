@@ -9,15 +9,17 @@
   "bugs": "https://github.com/wraithgar/fireball/issues",
   "license": "MIT",
   "dependencies": {
+    "async": "^0.8.0",
     "gm": "^1.14.2",
+    "underscore": "^1.6.0",
     "walk": "^2.2.1",
-    "wtchr": "0.0.1",
-    "async": "^0.7.0",
-    "underscore": "^1.6.0"
+    "wtchr": "0.0.1"
   },
   "devDependencies": {
     "hapi": "^4.0.0",
-    "precommit-hook": "^0.4.1"
+    "precommit-hook": "^1.0.0"
+  },
+  "scripts": {
   },
   "repository": {
     "type": "git",

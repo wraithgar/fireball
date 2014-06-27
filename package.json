@@ -1,7 +1,7 @@
 {
   "name": "fireball",
   "description": "A very simple image host",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": {
     "name": "Michael Garvin",
     "url": "http://danger.computer"
@@ -19,8 +19,7 @@
     "hapi": "^4.0.0",
     "precommit-hook": "^1.0.0"
   },
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git@github.com:wraithgar/fireball.git"
